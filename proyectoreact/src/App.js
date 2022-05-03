@@ -3,11 +3,19 @@ import './App.css';
 import NavBar from './components/NavBar.jsx';
 import './components/NavBar.css'
 import './index.js';
+import ItemListContainer from './components/ItemListContainer';
+import CartWidget from './components/CartWidget';
 
 function App() {
   return (
     <div className="App">
-      <NavBar/>
+      <NavBar>
+     
+      </NavBar>
+      <CartWidget/>
+      
+      <ItemListContainer/>
+      
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

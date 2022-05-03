@@ -10,7 +10,7 @@ body{
     justify-content: center;
     justify-items: center;
     text-align: center;
-    background-color: black;
+    background-color: white;
 }
 .navBar__item{
     display: flex;
@@ -18,7 +18,7 @@ body{
     justify-content: center;
     justify-items: center;
     text-align: center;
-    ;
+    
 }
 
 .navBar__list{
@@ -49,4 +49,13 @@ body{
 }
 .header__titulo{
     color: aqua;
+}
+.ItemListContainer{
+    color: blue;
+}
+.carrito{
+    width: 35px;
+    background-color: white;
+   
+    
 }
