@@ -1,5 +1,6 @@
-import "./NavBar.css";
+import "./../components/CartWidget.css";
 import img from '../imagenes/carrito.png'
+ 
 
 const CartWidget = () =>{
     return(
@@ -11,3 +12,4 @@ const CartWidget = () =>{
     )
 }
 export default CartWidget;
+

@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+import React from 'react';
+
 import './App.css';
 import NavBar from './components/NavBar.jsx';
 import './components/NavBar.css'
@@ -9,10 +10,11 @@ import CartWidget from './components/CartWidget';
 function App() {
   return (
     <div className="App">
+      
       <NavBar>
      
       </NavBar>
-      <CartWidget/>
+      
       
       <ItemListContainer/>
       

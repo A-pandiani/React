@@ -1,6 +1,3 @@
-body{
-    background-color: rgb(9, 7, 19);
-}
 
 
 
@@ -52,10 +49,4 @@ body{
 }
 .ItemListContainer{
     color: blue;
-}
-.carrito{
-    width: 35px;
-    background-color: white;
-   
-    
 }

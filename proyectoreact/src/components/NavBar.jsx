@@ -1,10 +1,11 @@
 import "./NavBar.css";
-
+import "./CartWidget";
+import CartWidget from "./CartWidget";
 const NavBar =() => {
 return (
 <header className="header">
     <h1 className="header__titulo">PlayKira's</h1>
-    <a className="header__logo" href="">
+    <a className="header__logo" href="#">
         <img className=" header__img" src="./logo192.png" alt=""></img>
     </a>
     <nav className="navBar">
@@ -14,7 +15,9 @@ return (
     <li className="navBar__item"><a className="navBar__link" href="#">Estrenos</a></li>
     <li className="navBar__item"><a className="navBar__link" href="#">Carrito</a></li>
 </ul>
+ <CartWidget/>
     </nav>
+    
 </header>
 
 
@@ -29,4 +32,5 @@ return (
 
 
 }
+
 export default NavBar;
