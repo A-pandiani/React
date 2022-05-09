@@ -1,0 +1,32 @@
+.itemCount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.itemCount__minusBtn {
+    border: none;
+    background: rgba(194, 16, 16, 0.8);
+    width: 30px;
+    padding-bottom: 0.4rem;
+    border-radius: 10%;
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+    margin-right: 1rem;
+}
+.itemCount__quantity {
+    font-size: 2rem;
+    color: white;
+}
+.itemCount__plusBtn {
+    border: none;
+    background: rgba(9, 219, 104, 0.8);
+    width: 30px;
+    padding-bottom: 0.4rem;
+    border-radius: 10%;
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+    margin-left: 1rem;
+}
+

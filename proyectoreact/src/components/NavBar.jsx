@@ -16,6 +16,7 @@ return (
     <li className="navBar__item"><a className="navBar__link" href="#">Carrito</a></li>
 </ul>
  <CartWidget/>
+ 
     </nav>
     
 </header>

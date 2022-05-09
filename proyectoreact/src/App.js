@@ -5,6 +5,7 @@ import NavBar from './components/NavBar.jsx';
 import './components/NavBar.css'
 import './index.js';
 import ItemListContainer from './components/ItemListContainer';
+import './components/ItemCount.jsx';
 
 
 function App() {
