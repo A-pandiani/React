@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import React from 'react';
 
 import './App.css';
@@ -6,10 +7,11 @@ import './components/NavBar.css'
 import './index.js';
 import ItemListContainer from './components/ItemListContainer';
 import './components/ItemCount.jsx';
-
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
       
       <NavBar>
@@ -17,7 +19,7 @@ function App() {
       </NavBar>
       
       
-      <ItemListContainer/>
+      
       
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -33,7 +35,14 @@ function App() {
           Learn React
         </a>
       </header> */}
+       <Routes>
+          <Route path="/" element={<ItemListContainer greeting="Hola, soy ItemListContainer!"/>} />
+          <Route path="/category/:id" element={<ItemListContainer greeting="Hola, soy ItemListContainer!"/>} />
+          <Route path="/itemDetail/:id" element={<ItemDetailContainer/>} />
+          <Route path="/*" element={<Navigate to="/" replace/>} />
+        </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 

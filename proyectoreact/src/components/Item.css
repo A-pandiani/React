@@ -11,7 +11,7 @@
     overflow: hidden;
     margin:  auto;
 }
-.item__filtro {
+.item__filter {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -20,7 +20,7 @@
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
 }
-.item__titulo {
+.item__title {
     margin-bottom: 1rem;
     font-size: 2rem;
     text-decoration: underline;
@@ -29,7 +29,7 @@
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
-.item__informacion {
+.item__info {
     z-index: 2;
     position: absolute;
     bottom: 1rem;
@@ -37,3 +37,7 @@
     padding: 1rem;
     color: white;
 }
+.item__category {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;  }

@@ -1,0 +1,26 @@
+[
+    {
+        "id": "01",
+        "categoria": "Series",
+        "name": "Hombre Araña",
+        "price": "300",
+        "img": "/imagenes/HombreAraña.jpg",
+        "detail": "Spider-Man: No Way Home es una película estadounidense de superhéroes basada en el personaje Spider-Man, de Marvel Comics, coproducida por Columbia Pictures y Marvel Studios, y distribuida por Sony Pictures Releasing. Es la secuela de Spider-Man: Homecoming (2017) y Spider-Man: Lejos de casa (2019),"
+    },
+    {
+        "id": "02",
+        "categoria": "Estrenos",
+        "name": "Dr.Strange",
+        "price": "350",
+        "img": "/imagenes/DrStrange.jpg",
+        "detail": "Doctor Strange en el Multiverso de la Locura es una película de superhéroes estadounidense basada en el personaje Doctor Strange, de Marvel Comics. Producida por Marvel Studios y distribuida por Walt Disney Studios Motion Pictures, es la secuela de Doctor Strange (2016) "
+    },
+    {
+        "id": "03",
+        "categoria": "Peliculas",
+        "name": "Superman",
+        "price": "400",
+        "img": "/imagenes/Superman.jpg",
+        "detail": "Superman Returns es una película de superhéroes estadounidense de 2006 dirigida y coproducida por Bryan Singer y escrita por Michael Dougherty y Dan Harris, a partir de una historia de ellos mismos. Se basa en el personaje Superman de DC Comics."
+    }
+]
