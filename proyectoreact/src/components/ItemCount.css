@@ -29,4 +29,14 @@
     color: white;
     margin-left: 1rem;
 }
+.itemCount__addToCartBtn{
+    margin-left: 3rem;
+    border: none;
+    background: white;
+    border-radius: 10%;
+    cursor: pointer;
+    font-size: 3rem;
+    
+    padding-bottom: 0.4rem;
+}
 
