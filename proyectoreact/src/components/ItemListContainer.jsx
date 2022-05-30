@@ -7,28 +7,37 @@
 }
 export default ItemListContainer; */
 import { useEffect, useState } from "react";
-import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import { collection, getDocs, getFirestore, where, query } from 'firebase/firestore';
+import ItemList from "./ItemList";
 
-export default function ItemListContainer({greeting}) {
+
+
+export default function ItemListContainer() {
     const [items,setItems] = useState([]);
     const [loader,setLoader] = useState(true);
     const {id} = useParams();
 
     useEffect(() => {
-        fetch("/data/data.json")
-        .then(response => response.json())
-        .then(data => setItems(data))
-        .catch(err => console.log(err))
-        .finally(() => setLoader(false))
-    },[]);
+        const db = getFirestore();
+        const queryCollection = collection(db, 'items');
+        if (!id) {
+            getDocs(queryCollection)
+            .then(resp => setItems(resp.docs.map(el => ({id: el.id, ...el.data()}))))
+            .catch(err => console.log(err))
+            .finally(() => setLoader(false))
+        } else {
+            const queryCollectionFilter = query(queryCollection, where('category','==',id));
+            getDocs(queryCollectionFilter)
+            .then(resp => setItems(resp.docs.map(el => ({id: el.id, ...el.data()}))))
+            .catch(err => console.log(err))
+            .finally(() => setLoader(false))
+        }
+    },[id]);
 
-    return (
-        <div className="itemListContainer">
-            {/* <h1 className="itemListContainer__title" style={{color: "blue"}}>{greeting}</h1> */}
-            {loader? <h2>Cargando...</h2>: <ItemList items={items} id={id} />}
-        </div>
-    );
+    return 
+    
+    
 }
 /* const products = [
     {id: "01", categoria: "Peliculas", name: "Dr.Strange", price: 500, img: '"../imagenes/DrStrange.jpg"'},

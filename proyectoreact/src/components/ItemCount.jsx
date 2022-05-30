@@ -32,10 +32,9 @@ export default function ItemCount({stock, initial, onAdd}) {
     );
 } */
 import { useState } from 'react';
-import { Link } from "react-router-dom";
 import './ItemCount.css';
 
-export default function ItemCount({id, initial, stock, onAdd}) {
+export default function ItemCount({initial, stock, onAdd}) {
     const [quantity, setQuantity] = useState(initial);
 
     function increase() {
@@ -43,14 +42,12 @@ export default function ItemCount({id, initial, stock, onAdd}) {
             setQuantity(quantity + 1);
         } 
     }
-
     function decrease() {
         if (quantity > 1) {
             setQuantity(quantity - 1);
         } 
     }
-
-    function addToCart() {
+    function addItem() {
         onAdd(quantity);
     }
 
@@ -59,9 +56,7 @@ export default function ItemCount({id, initial, stock, onAdd}) {
             <button id='less' className="itemCount__minusBtn" onClick={decrease}>-</button>
             <span className="itemCount__quantity">{quantity}</span>
             <button id='plus' className="itemCount__plusBtn" onClick={increase}>+</button>
-            <Link to={`/itemDetail/${id}`}>
-                <button className="itemCount__addToCartBtn" onClick={addToCart}><i class="bi bi-bag-plus"></i></button>
-            </Link>
+            <button className="itemCount__addToCartBtn" onClick={addItem}><i className="bi bi-bag-plus"></i></button>
         </div>
     );
 }
