@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, getFirestore, where, query } from 'firebase/firestore';
 import ItemList from "./ItemList";
+import {app} from 'firebase/app';
 
 
 
@@ -19,7 +20,7 @@ export default function ItemListContainer() {
     const {id} = useParams();
 
     useEffect(() => {
-        const db = getFirestore();
+        const db = getFirestore(app);
         const queryCollection = collection(db, 'items');
         if (!id) {
             getDocs(queryCollection)
